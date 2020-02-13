@@ -1,0 +1,142 @@
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Runchao Han} % Your name
+\address{25 Exhibition Walk, Clayton VIC 3800, Australia} % Your address
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{runchao.han@monash.edu \\ elvisage941102@gmail.com}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Monash University and CSIRO-Data61} \hfill {\em February 2019 - Present} 
+\\ Doctor of Philosophy\hfill { Supervisors: Jiangshan Yu, Joseph Liu and Shiping Chen}
+\\ Faculty of Information Technology and Distributed Systems Security group\\
+%
+\\{\bf The University of Manchester} \hfill {\em August 2017 - September 2018} 
+\\ MSc Advanced Computer Science\hfill {Supervisor: Christos Kotselidis}
+\\ School of Computer Science\hfill { Overall Percentage: 82/100 }\\
+%
+\\{\bf Beijing University of Posts and Telecommunications} \hfill {\em September 2013 - July 2017} 
+\\ BSc E-Commerce Engineering with Law\hfill { Overall Percentage: 83/100 }
+%Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+
+
+\end{rSection}
+
+% \begin{rSection}{Carrier Objective}
+%  To work for an organization which provides me the opportunity to improve my skills and knowledge to grow along with the organization objective.
+% \end{rSection}
+%--------------------------------------------------------------------------------
+%    Projects And Seminars
+%-----------------------------------------------------------------------------------------------
+\begin{rSection}{Research}
+
+
+\textbf{On the optionality and fairness of Atomic Swap}
+\begin{itemize}
+    \item We showed the HTLC-based Atomic Swap equals to an American Call Option without premium.
+    \item We evaluated the unfairness of HTLC-based Atomic Swaps using Cox-Ross-Rubinstein model.
+    \item We fixed such unfairness of HTLC-based Atomic Swap by paying the premium during the swap.
+\end{itemize}
+
+\textbf{Challenging the honest majority assumption of permissionless blockchains}
+\begin{itemize}
+    \item We experimentally showed that the current incentive mechanism may encourage rational participants to launch 51\% attacks.
+    \item We formally modelled 51\% attacks with external mining power as a Markov Decision Process.
+    \item We evaluated such 51\% attacks and found that, 51\% attacks are feasible and profitable for most mainstream PoW-based blockchains.
+\end{itemize}
+
+\textbf{Analysis and Optimizations of Memory-Hard PoW Algorithms}
+\begin{itemize}
+    \item We surveyed state-of-the-art Proof-of-Work algorithms deployed in prevalent cryptocurrencies.
+    \item We profiled CUDA implemented memory-hard PoW algorithms: Ethash, CryptoNight and Scrypt.
+    \item We optimised the Ethash CUDA implementation on Nvidia's GPUs.
+\end{itemize}
+
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{Bytom Blockchain, Hangzhou, China}{September 2018 - January 2019}{Intern Blockchain Engineer}{Hangzhou, China}
+\item Developed and refactored the original mining pool of the Bytom blockchain
+\item Developed the first version of the heterogeneous desktop grid computing platform based on the mining pool and the AI cloud platform
+\item Research on state-of-the-art technologies to improve the Bytom blockchain (sharding, consensus and P2P) and the cryptocurrency mining pool
+\end{rSubsection}
+
+\begin{rSubsection}{CNIC, Chinese Academy of Sciences, Beijing, China}{June 2017 - July 2017}{Intern Researcher}{Beijing, China}
+\item Designed the Solidity smart contracts for electronic licenses library based on Ethereum
+\item Deployed smart contracts on Docker containers of Geth/TestRPC clients
+\item Implemented the front-end client of the DApp based on Web3 and Truffle
+\end{rSubsection}
+
+\end{rSection}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Selected publications} 
+
+\begin{itemize}
+    \item Runchao Han, Zhimei Sui, Jiangshan Yu, Joseph Liu, Shiping Chen. Sucker Punch Makes You Richer: Rethinking Proof-of-Work Security. In submission.
+    \item Runchao Han, Haoyu Lin, Jiangshan Yu. On the optionality and fairness of Atomic Swaps. AFT'19.
+    \item Runchao Han, Nikolaos Foutris and Christos Kotselidis. Demystifying Crypto Mining: Performance Analysis and Optimizations of PoW Algorithms. ISPASS'19.
+\end{itemize}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Strengths}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Programming Languages & C++, Go, Rust, Java, Python \\
+Blockchains & Bitcoin, Ethereum, Monero \\
+Parallel Programming & CUDA, OpenMP, MPI \\
+Cryptography & Libsodium, Ring (Rust), golang/crypto\\
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL INFO SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Additional Information}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Github & SebastianElvis \\
+Blog & SebastianElvis.github.io \\
+Wechat & elvisage \\
+\end{tabular}
+
+\end{rSection}
+
+\end{document}
