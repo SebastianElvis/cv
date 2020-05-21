@@ -6,12 +6,14 @@
 \documentclass{resume} % Use the custom resume.cls style
 
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{url}
+
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \name{Runchao Han} % Your name
 \address{25 Exhibition Walk, Clayton VIC 3800, Australia} % Your address
 %\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-\address{runchao.han@monash.edu \\ elvisage941102@gmail.com}
+\address{runchao.han@monash.edu \\ \url{https://runchao.rocks}}
 
 \begin{document}
 
@@ -46,27 +48,27 @@
 %-----------------------------------------------------------------------------------------------
 \begin{rSection}{Research}
 
+\textbf{Analysis and improvement of shard allocation protocols}
+\begin{itemize}
+    \item We formally define shard allocation protocols for sharded blockchains.
+    \item We evaluate state-of-the-art shard allocation protocols based on our formalisation.
+    \item We design a shard allocation protocol with optimal security and performance guarantee.
+\end{itemize}
 
 \textbf{On the optionality and fairness of Atomic Swap}
 \begin{itemize}
-    \item We showed the HTLC-based Atomic Swap equals to an American Call Option without premium.
-    \item We evaluated the unfairness of HTLC-based Atomic Swaps using Cox-Ross-Rubinstein model.
-    \item We fixed such unfairness of HTLC-based Atomic Swap by paying the premium during the swap.
+    \item We show the HTLC-based Atomic Swap equals to an American Call Option without premium.
+    \item We evaluate the unfairness of HTLC-based Atomic Swaps using Cox-Ross-Rubinstein model.
+    \item We fix such unfairness of HTLC-based Atomic Swap by paying the premium during the swap.
 \end{itemize}
 
 \textbf{Challenging the honest majority assumption of permissionless blockchains}
 \begin{itemize}
-    \item We experimentally showed that the current incentive mechanism may encourage rational participants to launch 51\% attacks.
-    \item We formally modelled 51\% attacks with external mining power as a Markov Decision Process.
-    \item We evaluated such 51\% attacks and found that, 51\% attacks are feasible and profitable for most mainstream PoW-based blockchains.
+    \item We show the honest majority assumption does not always hold, and existing incentive mechanisms in PoW-based consensus may encourage rational miners to launch 51\% attacks.
+    \item We formally model 51\% attacks with external mining power as a Markov Decision Process.
+    \item We evaluate such 51\% attacks and found that, 51\% attacks are feasible and profitable for most mainstream PoW-based blockchains.
 \end{itemize}
 
-\textbf{Analysis and Optimizations of Memory-Hard PoW Algorithms}
-\begin{itemize}
-    \item We surveyed state-of-the-art Proof-of-Work algorithms deployed in prevalent cryptocurrencies.
-    \item We profiled CUDA implemented memory-hard PoW algorithms: Ethash, CryptoNight and Scrypt.
-    \item We optimised the Ethash CUDA implementation on Nvidia's GPUs.
-\end{itemize}
 
 \end{rSection}
 
@@ -101,7 +103,10 @@
 
 \begin{rSection}{Selected publications} 
 
+Full publication list can be found at \url{https://dblp.org/pers/hd/h/Han:Runchao}.
+
 \begin{itemize}
+    \item Runchao Han, Jiangshan Yu, Ren Zhang. Analysing and Improving Shard Allocation Protocols for Sharded Blockchains. In submission.
     \item Runchao Han, Zhimei Sui, Jiangshan Yu, Joseph Liu, Shiping Chen. Challenging the honest majority assumption of permissionless blockchains. In submission.
     \item Runchao Han, Haoyu Lin, Jiangshan Yu. On the optionality and fairness of Atomic Swaps. AFT'19.
     \item Runchao Han, Nikolaos Foutris and Christos Kotselidis. Demystifying Crypto Mining: Performance Analysis and Optimizations of PoW Algorithms. ISPASS'19.
@@ -133,7 +138,7 @@ Cryptography & Libsodium, Ring (Rust), golang/crypto\\
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 Github & SebastianElvis \\
-Blog & SebastianElvis.github.io \\
+Homepage & runchao.rocks \\
 Wechat & elvisage \\
 \end{tabular}
 
