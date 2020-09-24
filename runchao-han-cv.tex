@@ -7,6 +7,13 @@
 
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
@@ -28,7 +35,7 @@
 \\ Faculty of Information Technology and Distributed Systems Security group\\
 %
 \\{\bf The University of Manchester} \hfill {\em August 2017 - September 2018} 
-\\ MSc Advanced Computer Science\hfill {Supervisor: Christos Kotselidis}
+\\ MSc Advanced Computer Science (with Distinction)\hfill {Supervisor: Christos Kotselidis}
 \\ School of Computer Science\hfill { Overall Percentage: 82/100 }\\
 %
 \\{\bf Beijing University of Posts and Telecommunications} \hfill {\em September 2013 - July 2017} 
@@ -46,100 +53,84 @@
 %--------------------------------------------------------------------------------
 %    Projects And Seminars
 %-----------------------------------------------------------------------------------------------
-\begin{rSection}{Research}
+\begin{rSection}{Research and impact}
 
-\textbf{Analysis and improvement of shard allocation protocols}
+I'm broadly interested in distributed system security.
+Currently, I'm focusing on improving the security and scalability of Blockchains and other distributed systems.
+My research mainly applies techniques from Cryptography and Distributed Computing.
+
+My research has led to real-world impacts and media coverage. For example,
 \begin{itemize}
-    \item We formally define shard allocation protocols for sharded blockchains.
-    \item We evaluate state-of-the-art shard allocation protocols based on our formalisation.
-    \item We design a shard allocation protocol with optimal security and performance guarantee.
+    \item I invented \textsc{RandChain} [HYL20], a new family of Decentralised Randomness Beacon protocols that are simple, secure and scalable. This research  is featured in \href{https://vdfresearch.org/}{VDF Research}.
+    \item My paper analysing \emph{shard allocation} (a key component and a missing abstraction in sharded blockchains) [HYZ20] is selected as \href{https://zkcapital.substack.com/}{"Paper of the Week" (Issue \#68)} by ZK Capital.
+    \item I study two overlooked 51\% attacks on PoW-based blockchains [HSY+20]. Three large-scale 51\% attacks on Ethereum Classic (\href{https://news.bitcoin.com/ethereum-classic-suffers-51-attack-again-delisting-risk-amplified}{1},\href{https://decrypt.co/40196/hackers-launch-third-51-attack-on-ethereum-classic-this-month}{2},\href{https://coingeek.com/over-1m-double-spent-in-latest-ethereum-classic-51-attack}{3}) happened within a month are likely to be our analysed attacks.
+    \item I identify and formalise an overlooked design flaw of the Atomic Swap protocol [HLY19]. The flaw allows the swap initiator to arbitrage, making the protocol unfair. Our proposed fixes are included in the Ethereum Improvement Proposals (\href{https://github.com/ethereum/EIPs/issues/2266}{EIP-2266}). This research is covered by \href{https://cryptonews.com.au/monash-university-researchers-developing-cryptocurrency-transaction-platform}{CryptoNews}.
+    \item I first conduct the performance analysis on memory-hard cryptocurrency mining algorithms [HFK19]. This research is covered by \href{https://medium.com/@horizonfintex/blockchain-research-bytes-1-9d023e080765}{Horizon Globex}.
 \end{itemize}
-
-\textbf{On the optionality and fairness of Atomic Swap}
-\begin{itemize}
-    \item We show the HTLC-based Atomic Swap equals to an American Call Option without premium.
-    \item We evaluate the unfairness of HTLC-based Atomic Swaps using Cox-Ross-Rubinstein model.
-    \item We fix such unfairness of HTLC-based Atomic Swap by paying the premium during the swap.
-\end{itemize}
-
-\textbf{Challenging the honest majority assumption of permissionless blockchains}
-\begin{itemize}
-    \item We show the honest majority assumption does not always hold, and existing incentive mechanisms in PoW-based consensus may encourage rational miners to launch 51\% attacks.
-    \item We formally model 51\% attacks with external mining power as a Markov Decision Process.
-    \item We evaluate such 51\% attacks and found that, 51\% attacks are feasible and profitable for most mainstream PoW-based blockchains.
-\end{itemize}
-
 
 \end{rSection}
-
-
-
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Work Experience}
-
-\begin{rSubsection}{Bytom Blockchain, Hangzhou, China}{September 2018 - January 2019}{Intern Blockchain Engineer}{Hangzhou, China}
-\item Developed and refactored the original mining pool of the Bytom blockchain
-\item Developed the first version of the heterogeneous desktop grid computing platform based on the mining pool and the AI cloud platform
-\item Research on state-of-the-art technologies to improve the Bytom blockchain (sharding, consensus and P2P) and the cryptocurrency mining pool
-\end{rSubsection}
-
-\begin{rSubsection}{CNIC, Chinese Academy of Sciences, Beijing, China}{June 2017 - July 2017}{Intern Researcher}{Beijing, China}
-\item Designed the Solidity smart contracts for electronic licenses library based on Ethereum
-\item Deployed smart contracts on Docker containers of Geth/TestRPC clients
-\item Implemented the front-end client of the DApp based on Web3 and Truffle
-\end{rSubsection}
-
-\end{rSection}
-
-
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATION SECTION
 %----------------------------------------------------------------------------------------
 
+
 \begin{rSection}{Selected publications} 
 
 Full publication list can be found at \url{https://dblp.org/pers/hd/h/Han:Runchao}.
+All of my papers are available online, and most of them are hosted on IACR ePrint.
 
 \begin{itemize}
-    \item Runchao Han, Jiangshan Yu, Ren Zhang. Analysing and Improving Shard Allocation Protocols for Sharded Blockchains. In submission.
-    \item Runchao Han, Zhimei Sui, Jiangshan Yu, Joseph Liu, Shiping Chen. Challenging the honest majority assumption of permissionless blockchains. In submission.
-    \item Runchao Han, Haoyu Lin, Jiangshan Yu. On the optionality and fairness of Atomic Swaps. AFT'19.
-    \item Runchao Han, Nikolaos Foutris and Christos Kotselidis. Demystifying Crypto Mining: Performance Analysis and Optimizations of PoW Algorithms. ISPASS'19.
+    \item[\bf HYL20] \textsc{RandChain}: Decentralised Randomness Beacon from Sequential Proof-of-Work. Runchao Han, Jiangshan Yu, Haoyu Lin. \textbf{In submission}.
+    \item[\bf HYZ20] Analysing and Improving Shard Allocation Protocols for Sharded Blockchains. Runchao Han, Jiangshan Yu, Ren Zhang. \textbf{In submission}.
+    \item[\bf HSY+20] Challenging the honest majority assumption of permissionless blockchains. Runchao Han, Zhimei Sui, Jiangshan Yu, Joseph Liu, Shiping Chen.  \textbf{In submission}.
+    \item[\bf HLY19] On the optionality and fairness of Atomic Swaps. Runchao Han, Haoyu Lin, Jiangshan Yu.  ACM Conference on Advances in Financial Technologies. \textbf{AFT'19}.
+    \item[\bf HFK19] Demystifying Crypto Mining: Performance Analysis and Optimizations of PoW Algorithms. Runchao Han, Nikolaos Foutris, Christos Kotselidis. IEEE International Symposium on Performance Analysis of Systems and Software. \textbf{ISPASS'19, best paper nominee}.
 \end{itemize}
 
 \end{rSection}
 
-
-%----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Technical Strengths}
-
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Programming Languages & C++, Go, Rust, Java, Python \\
-Blockchains & Bitcoin, Ethereum, Monero \\
-Parallel Programming & CUDA, OpenMP, MPI \\
-Cryptography & Libsodium, Ring (Rust), golang/crypto\\
-\end{tabular}
-
+\begin{rSection}{Talks}
+\begin{itemize}
+    \item VRF-Based Mining: Simple Non-Outsourceable Cryptocurrency Mining. CBT workshop, virtual. September, 2020.
+    \item Demystifying Crypto-Mining: Analysis and Optimizations of Memory-Hard PoW Algorithms. Virtual seminar at Huawei Noah's Ark Lab. July, 2020.
+    \item Scaling blockchains via sharding. Confirmation seminar at Monash University. March, 2020.
+    \item On the optionality and fairness of Atomic Swaps. AFT conference presentation at Zurich. October, 2019.
+\end{itemize}
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-%	ADDITIONAL INFO SECTION
-%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Teaching}
+\begin{itemize}
+    \item Teaching associate for FIT 5214 Blockchain, Monash University. 2019 Fall.
+\end{itemize}
+\end{rSection}
+
+
+\begin{rSection}{Professional services}
+\subsection*{External reviewer}
+\begin{itemize}
+    \item 2020: AFT, ICDCS, SRDS, ACNS, AsiaCCS, TrustCom, ACISP, ICBC, TDSC, The Computer Journal, IEEE IoT Journal, IEEE Software Journal, IEEE Transaction of Service Computing
+    \item 2019: Indocrypt, TrustCom, Future Generation Computing System
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Work experience}
+
+\begin{rSubsubsection}{Bytom Blockchain, Hangzhou, China}{September 2018 - January 2019}{Intern Blockchain Engineer}{Hangzhou, China}
+\end{rSubsubsection}
+
+\begin{rSubsubsection}{CNIC, Chinese Academy of Sciences, Beijing, China}{June 2017 - July 2017}{Intern Researcher}{Beijing, China}
+\end{rSubsubsection}
+
+\end{rSection}
 
 \begin{rSection}{Additional Information}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 Github & SebastianElvis \\
-Homepage & runchao.rocks \\
 Wechat & elvisage \\
+References & Available upon request
 \end{tabular}
 
 \end{rSection}
